@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+  <h2>Welcome Page</h2>
+  <form id="greetForm" onsubmit="greet();">
+    <label>Your name:</label>
+    <input type="text" id="nameInput" placeholder="e.g. Maria">
+    <button type="submit">Say Hello</button>
+  </form>
+
+
+  <p id="output"></p>
+
+
+  <script>
+    function greet() {
+      let name = document.getElementById("nameInput").value;
+      if (name === '') {
+        document.getElementById("output").innerHTML = "Please enter your name!";
+      } else {
+        document.getElementById("output").innerHTML = "Welcome to the site, " + name + " 👋";
+      }
+
+
+	  return false;
+    }
+  </script>
+
+
+</body>
+</html>
